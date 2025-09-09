@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CatLover</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    
+  <div class="sidebar">
+    <h2>CatLover</h2>
+    <ul>
+      <li onclick="showSection('home')">Início</li>
+      <li onclick="openLoginModal()">🔐 Entrar</li>
+      <li onclick="showSection('types')">Tipos</li>
+      <li onclick="showSection('trainers')">Adestradores</li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <section id="home" class="section active">
+        <h1>🐾 Bem-vindo à CatLover!</h1>
+        <p>
+          Se você é apaixonado por gatos, este é o seu lugar. A <strong>CatLover</strong> é muito mais que uma página — é um cantinho especial feito por e para quem ama o mundo felino. 💕🐱
+        </p>
+      
+        <p>
+          Fundada em 2020, nossa missão é compartilhar amor, conhecimento e curiosidades sobre os gatos que encantam nossos corações. Quer você seja tutor de primeira viagem ou um gateiro veterano, aqui você encontrará conteúdos feitos com carinho. 💬✨
+        </p>
+      
+        <p>
+          Navegue por nossas seções para descobrir:
+          <ul class="highlight-list">
+            <li>📖 <strong>Raças e curiosidades</strong>: conheça a origem e as características de dezenas de raças felinas;</li>
+            <li>🧠 <strong>Dicas de comportamento</strong>: entenda como seu gato pensa e sente;</li>
+            <li>🎓 <strong>Adestradores parceiros</strong>: descubra especialistas que podem ajudar com amor e respeito;</li>
+            <li>📸 <strong>Galeria e carrossel</strong>: veja fotos fofas e inspire-se com os gatinhos mais encantadores da internet.</li>
+          </ul>
+        </p>
+      
+        <p class="quote">
+          “Gatos são anjos com bigodes.” — 🐾
+        </p>
+      
+        <p>
+          🐾 Junte-se à comunidade CatLover e venha ronronar com a gente!
+        </p>
+      </section>
+      
+
+    <section id="types" class="section">
+        <h1> Tipos de Gatos</h1>
+        <div class="cat-grid">
+      
+          <div class="cat-card">
+            <img src="./img/siames.png" alt="Siamês">
+            <h2>Siamês</h2>
+            <p>Origem na Tailândia. Gato elegante, sociável e vocal.</p>
+          </div>
+      
+          <div class="cat-card">
+            <img src="./img/persa.png" alt="Persa">
+            <h2>Persa</h2>
+            <p>Pelo longo e temperamento calmo. Origem na antiga Pérsia (Irã).</p>
+          </div>
+      
+          <div class="cat-card">
+            <img src="./img/mainecoon.png" alt="Maine Coon">
+            <h2>Maine Coon</h2>
+            <p>Gigante gentil dos EUA, com pelagem espessa e personalidade doce.</p>
+          </div>
+      
+          <div class="cat-card">
+            <img src="./img/bengal.png" alt="Bengal">
+            <h2>Bengal</h2>
+            <p>Visual exótico como leopardo. Pelagem curta com reflexos dourados ou metálicos.</p>
+          </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-track">
+          
+              <div class="carousel-item">
+                <h2>Sphynx</h2>
+                <img src="./img/sphynx.png" alt="Sphynx" class="carousel-image">
+                <p>Gato sem pelos, com pele enrugada e corpo musculoso. Extremamente carinhoso e sociável.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Ragdoll</h2>
+                <img src="./img/ragdoll.ong.jpg" alt="Ragdoll" class="carousel-image">
+                <p>De porte grande e pelagem semi-longa, famoso por relaxar completamente quando pego no colo.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Abissínio</h2>
+                <img src="./img/abissinio.png" alt="Abissínio" class="carousel-image">
+                <p>Pelagem curta, corpo atlético e curioso. Muito ativo e brincalhão.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Scottish Fold</h2>
+                <img src="./img/scottish.png" alt="Scottish Fold" class="carousel-image">
+                <p>Orelhas dobradas para frente, expressão doce e pelagem variada. Calmo e afetuoso.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Russian Blue</h2>
+                <img src="./img/russian.png" alt="Russian Blue" class="carousel-image">
+                <p>Pelagem azul-prateada curta, olhos verdes e personalidade tranquila.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>British Shorthair</h2>
+                <img src="./img/british.png" alt="British Shorthair" class="carousel-image">
+                <p>Corpo robusto, pelagem densa e personalidade muito amigável.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Birmanês</h2>
+                <img src="./img/birmanes.png" alt="Birmanês" class="carousel-image">
+                <p>Pelagem semi-longa, olhos azuis e temperamento dócil.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Oriental Shorthair</h2>
+                <img src="./img/oriental.png" alt="Oriental Shorthair" class="carousel-image">
+                <p>Parente do Siamês. Corpo esguio, pelagem curta e comportamento extrovertido.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Norueguês da Floresta</h2>
+                <img src="./img/noruegues.png" alt="Norueguês da Floresta" class="carousel-image">
+                <p>Pelagem longa e adaptada ao frio. Forte, independente e muito elegante.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Devon Rex</h2>
+                <img src="./img/devon.png" alt="Devon Rex" class="carousel-image">
+                <p>Pelos encaracolados, orelhas grandes e comportamento brincalhão.</p>
+              </div>
+          
+              <div class="carousel-item">
+                <h2>Japanese Bobtail</h2>
+                <img src="./img/japanese.png" alt="Japanese Bobtail" class="carousel-image">
+                <p>Gato com cauda curta e personalidade energética. Símbolo de boa sorte no Japão.</p>
+              </div>
+          
+            </div>
+          
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+          </div>
+          
+      </section>
+      <section id="trainers" class="section">
+        <h1>🐾 Adestradores da CatLover</h1>
+      
+        <p>
+          Aqui na <strong>CatLover</strong>, acreditamos que o respeito, a paciência e o carinho são as chaves para uma convivência harmoniosa entre humanos e gatos. Por isso, contamos com adestradores especializados que trabalham com métodos <em>positivos</em> e <em>não agressivos</em>, focando sempre no bem-estar felino. 💖🐈
+        </p>
+      
+        <p>
+          Seja para corrigir comportamentos indesejados, ensinar seu gatinho a usar melhor o arranhador ou ajudar em momentos de estresse, você pode contar com nossos especialistas!
+        </p>
+      
+        <ul class="trainer-list">
+          <li>
+            <strong>🐱 Ana Felina</strong><br>
+            Com mais de 10 anos de experiência, é especialista em comportamento felino e trabalha com adaptação de gatos em novos lares.
+          </li>
+      
+          <li>
+            <strong>😺 João Gato</strong><br>
+            Focado em <em>adestramento positivo</em>, usa técnicas baseadas em reforço com petiscos e carinho. Perfeito para gatinhos teimosos!
+          </li>
+      
+          <li>
+            <strong>🐾 Luna Meow</strong><br>
+            Adestradora holística que utiliza sons, aromas e terapias naturais para tratar ansiedade, estresse e traumas em gatos.
+          </li>
+      
+          <li>
+            <strong>🧠 Dr. Tom Catson</strong><br>
+            Etólogo felino (especialista em comportamento animal), oferece consultorias para gatos com comportamentos complexos ou agressivos.
+          </li>
+      
+          <li>
+            <strong>🎓 Bella Ronrom</strong><br>
+            Instrutora de humanos! Ensina tutores a entender os sinais corporais e vocais dos gatos, promovendo uma relação mais empática.
+          </li>
+        </ul>
+      
+        <p class="info-note">
+          💬 Quer agendar uma consulta ou tirar dúvidas com nossos especialistas?<br>
+          Em breve, você poderá entrar em contato diretamente por aqui. Fique ligado! 🐾
+        </p>
+      </section>
+      
+  </div>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Entrar</h2>
+      <form>
+        <label for="username">Usuário:</label><br />
+        <input type="text" id="username" name="username" /><br />
+        <label for="password">Senha:</label><br />
+        <input type="password" id="password" name="password" /><br /><br />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

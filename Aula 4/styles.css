@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  display: flex;
+  background-color: #fff0f5;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #ffccdc;
+  color: #4b2e2e;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.highlight-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .highlight-list li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #4b2e2e;
+    background-color: #ffe6f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 192, 203, 0.3);
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #c71585;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+.sidebar h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #aa336a;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffe4ec;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #ffcce0;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.section {
+  display: none;
+}
+
+.trainer-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+  }
+  
+  .trainer-list li {
+    background-color: #f9f2ff;
+    border-left: 5px solid #b07fb9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(128, 0, 128, 0.1);
+    color: #4a2d4d;
+    font-size: 16px;
+  }
+  
+  .info-note {
+    font-style: italic;
+    background-color: #fff3f8;
+    padding: 15px;
+    border-radius: 8px;
+    color: #a04269;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(255, 192, 203, 0.3);
+  }
+  
+
+.section.active {
+  display: block;
+  background-color: #fff6fa;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255,182,193,0.3);
+}
+
+h1 {
+  color: #d63384;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.modal {
+    display: none; /* escondido inicialmente */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 192, 203, 0.6);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: linear-gradient(145deg, #ffe0ec, #fff9fb);
+    padding: 30px 25px;
+    width: 340px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(220, 120, 160, 0.25);
+    animation: popup 0.3s ease-out;
+    position: relative;
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+  }
+  
+  .modal-content h2 {
+    color: #d63384;
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+  
+  .modal-content p {
+    font-size: 15px;
+    color: #6b4a57;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ffcadd;
+    border-radius: 12px;
+    background-color: #fff0f5;
+    font-size: 16px;
+    transition: border-color 0.2s;
+  }
+  
+  .modal-content input:focus {
+    outline: none;
+    border-color: #ff80aa;
+    box-shadow: 0 0 4px #ffcce6;
+  }
+  
+  .modal-content button {
+    padding: 10px 25px;
+    background-color: #ff85b3;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 133, 179, 0.3);
+  }
+  
+  .modal-content button:hover {
+    background-color: #ff6fa0;
+  }
+  
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    color: #d63384;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+  
+  .close:hover {
+    transform: scale(1.2);
+  }
+  
+  @keyframes popup {
+    from {
+      transform: scale(0.10);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .cat-card {
+    background-color: #fff0f5;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .cat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cat-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .cat-card h2 {
+    margin: 10px 0 5px;
+    color: #d63384;
+    font-size: 20px;
+  }
+  
+  .cat-card p {
+    font-size: 14px;
+    color: #4b2e2e;
+  }
+ 
+ h1{
+    text-align: center;
+ }
+ 
+ .carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto;
+    overflow: hidden;
+    background-color: #fff0f6;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .carousel-image {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+  }
+  
+  .carousel-item h2 {
+    margin: 10px 0 5px;
+    color: #d63384;
+    font-size: 24px;
+  }
+  
+  .carousel-item p {
+    font-size: 16px;
+    color: #4b2e2e;
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  /* Botões de navegação */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    padding: 12px 16px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .carousel-btn:hover {
+    background-color: #e60073;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
+  
